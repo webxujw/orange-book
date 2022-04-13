@@ -1,0 +1,17 @@
+{
+  "name": "orange-book",
+  "version": "0.0.1",
+  "description": "橙皮书",
+  "main": "index.js",
+  "author": "webxujw@163.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.39",
+    "vuepress-theme-hope": "^2.0.0-beta.38"
+  }
+}
