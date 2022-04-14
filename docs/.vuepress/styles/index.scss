@@ -1,8 +1,64 @@
 
-
 .hero{
     padding-top:40px;
 }
 .nav-item{
     font-size: 16px;
+}
+.hero{
+    padding-bottom: 10px;
+}
+.calendar{
+    p{
+        margin: 0;
+    }
+    color: #666;
+    .title{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 30px;
+    }
+    .flex{
+        width: 525px;
+        display: flex;
+        flex-wrap:wrap;
+        margin: 0 auto;
+        // flex-grow: ;
+    }
+    .card{
+        font-size: 12px;
+        width: 75px;
+        height: 70px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+        padding-top:4px;
+        .lDay{
+            text-align: center;
+            color: #999;
+            line-height: 20px;
+        }
+        .sDay{
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 24px;
+        }
+        .days{
+            color: var(--theme-color);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    .active{
+        background-color: var(--theme-color);
+        color: #fff;
+        .lDay{
+            color: #fff;
+        }
+        .days{
+            color: #fff;
+        }
+    }
 }
