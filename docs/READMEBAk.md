@@ -2,7 +2,7 @@
 home: true
 layout: Blog
 title: 首页
-heroImage: /logo.jpeg
+heroImage: /logo.png
 heroText: 橙皮书
 bgImage: /bg.jpeg
 heroFullScreen: false

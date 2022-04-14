@@ -4,7 +4,11 @@ import sidebar from "./sidebar";
 
 export default defineThemeConfig({
   hostname: "https://xldou.cn",
-
+  themeColor: {
+    orange: "#fb9b5f",
+    blue: "#2196f3",
+    green: "#3eaf7c",
+  },
   author: {
     name: "Mr.Orange",
     url: "https://webxujw.com",
@@ -12,10 +16,10 @@ export default defineThemeConfig({
 
   iconPrefix: "iconfont icon-",
 
-  logo: "/logo.jpeg",
+  logo: "/logo.png",
 
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "webxujw/orange-book",
 
   docsDir: "demo/src",
 
@@ -33,7 +37,7 @@ export default defineThemeConfig({
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
-    description: "一个前端开发者",
+    description: "前端开发者的橙皮书",
     intro: "/intro.html",
     medias: {
       // Baidu: "https://example.com",
