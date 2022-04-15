@@ -5,6 +5,22 @@ import { defineSidebarConfig } from "vuepress-theme-hope";
 export default defineSidebarConfig({
   '/js/':'structure',
   '/vue/':'structure',
+  '/html/':'structure',
+  '/css/':'structure',
+  '/webpack/':'structure',
+  '/vite/':'structure',
+  '/npm/':'structure',
+  '/github/':'structure',
+  '/nodejs/':'structure',
+  '/koa/':'structure',
+  '/mysql/':'structure',
+  '/mongodb/':'structure',
+  '/algorithm/':'structure',
+  '/patterns/':'structure',
+  '/nginx/':'structure',
+  '/linux/':'structure',
+  '/verse/':'structure',
+  '/article/':'structure',
 })
 // export default defineSidebarConfig([
 //   "",
