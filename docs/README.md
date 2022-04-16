@@ -22,7 +22,7 @@ features:
   - title: 免费api接口文档
     icon: APIguanli
     details: 免费有效的常用api接口，免费的登陆登出，天气，ip转换地址等等
-    link: /api
+    link: /docapi
 
   - title: 留言板
     icon: liuyanban

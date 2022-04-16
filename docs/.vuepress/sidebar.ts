@@ -9,7 +9,7 @@ export default defineSidebarConfig({
   '/css/':'structure',
   '/webpack/':'structure',
   '/vite/':'structure',
-  '/npm/':'structure',
+  '/eng/':'structure',
   '/github/':'structure',
   '/nodejs/':'structure',
   '/koa/':'structure',
@@ -21,6 +21,8 @@ export default defineSidebarConfig({
   '/linux/':'structure',
   '/verse/':'structure',
   '/article/':'structure',
+  '/http/':'structure',
+  '/tools/':'structure',
 })
 // export default defineSidebarConfig([
 //   "",
