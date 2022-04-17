@@ -32,6 +32,8 @@ export default defineNavbarConfig([
   { text: "其他", icon: "shezhi",  prefix: "/",children:[
     { text: "开发工具", icon: "kaifagongju", link: "tools/" },
     { text: "副业", icon: "ps-f", link: "ps/" },
+    { text: "年度目标", icon: "renwujihua", link: "year/" },
+    { text: "life", icon: "mubiao", link: "life/" },
   ]  },
   {text:'文学随笔', icon: "wenxue01", prefix: "/",children:[
     { text: "诗句", icon: "weibiaoti-1", link: "verse/" },

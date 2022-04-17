@@ -23,6 +23,8 @@ export default defineSidebarConfig({
   '/article/':'structure',
   '/http/':'structure',
   '/tools/':'structure',
+  '/year/':'structure',
+  '/life/':'structure',
 })
 // export default defineSidebarConfig([
 //   "",
