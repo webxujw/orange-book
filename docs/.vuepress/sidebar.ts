@@ -25,6 +25,7 @@ export default defineSidebarConfig({
   '/tools/':'structure',
   '/year/':'structure',
   '/life/':'structure',
+  '/performance/':'structure'
 })
 // export default defineSidebarConfig([
 //   "",

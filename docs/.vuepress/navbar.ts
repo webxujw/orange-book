@@ -6,6 +6,7 @@ export default defineNavbarConfig([
     { text: "JS", icon: "bxl-javascript", link: "js/" },
     { text: "HTML", icon: "file-html", link: "html/" },
     { text: "CSS", icon: "file-css", link: "css/" },
+    { text: "性能", icon: "gaoxingneng", link: "performance/" },
     { text: "vue", icon: "vue", link: "vue/" },
     { text: "webpack", icon: "webpack", link: "webpack/" },
     { text: "vite", icon: "shandian", link: "vite/" },

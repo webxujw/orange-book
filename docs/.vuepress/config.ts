@@ -19,7 +19,7 @@ export default defineHopeConfig({
       "link",
       {
         rel: "stylesheet",
-        href: "//at.alicdn.com/t/font_3327774_twi0ygfxaen.css",
+        href: "//at.alicdn.com/t/font_3327774_7bia9qmqht.css",
       },
     ],
     [
