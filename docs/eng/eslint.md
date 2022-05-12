@@ -1,5 +1,6 @@
 ---
 title: Eslint
+index: 2
 ---
 
 ## 配置文件
