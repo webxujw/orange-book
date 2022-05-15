@@ -5,28 +5,21 @@ index: 2
 
 ## 打包流程概述
 
-![](/img/webpack_process.jpeg)
+<!-- ![](/img/webpack_process.jpeg) -->
 
 
-
-## shell 与 config 解析
+## 初始化参数配置
 
 每次在命令行输入 webpack 后，操作系统都会去调用 `./node_modules/.bin/webpack` 这个 shell 脚本。这个脚本会去调用 `./node_modules/webpack/bin/webpack.js` 并追加输入的参数，如 `-p` , `-w`。
 
 在 webpack.js 这个文件中 webpack 通过 optimist 将用户配置的 `webpack.config.js` 和 shell 脚本传过来的参数整合成 options 对象传到了下一个流程的控制对象中。
 
-### 1. optimist
+### 1. Commander
 
-和 commander 一样，optimist 实现了 node 命令行的解析，其 API 调用非常方便。
+实现了 node 命令行的解析，其 API 调用非常方便。
 
 ```js
-ar optimist = require("optimist");
-
-optimist
-  .boolean("json").alias("json", "j").describe("json")
-  .boolean("colors").alias("colors", "c").describe("colors")
-  .boolean("watch").alias("watch", "w").describe("watch")
-  ...
+ 
 ```
 
 
@@ -76,6 +69,13 @@ var webpack = require("../lib/webpack.js");
 var compiler = webpack(options);
 ```
 
+## 准备编译
+
+
+## 编译模块
+
+1. 配置loader ,从入口模块开始编译所有的文件
+2. 依据入口文件，
 
 ## 编译与构建流程
 
@@ -230,7 +230,15 @@ NormalModule.prototype.build = function build(options, compilation, resolver, fs
 可以看到无论是构建流程，处理依赖流程，包括后面的封装流程都是与 module 密切相关的。
 
 
-## 打包输出
+
+## 完成编译
+## 输出资源 
+
+根据入口模块及其依赖的模块，组合成包含多个模块的chunk
+
+将chunk转换为独立的资源，添加到输出列表
+
+
 
 
 在所有模块及其依赖模块 build 完成后，webpack 会监听 seal 事件调用各插件对构建后的结果进行封装，要逐次对每个 module 和 chunk 进行整理，生成编译后的源码，合并，拆分，生成 hash 。 同时这是我们在开发时进行代码优化和功能添加的关键环节。
@@ -324,5 +332,10 @@ MainTemplate.prototype.render = function(hash, chunk, moduleTemplate, dependency
 最后一步，webpack 调用 Compiler 中的 emitAssets() ，按照 output 中的配置项将文件输出到了对应的 path 中，从而 webpack 整个打包过程结束。要注意的是，若想对结果进行处理，则需要在 emit 触发后对自定义插件进行扩展。
 
 
+
+## 写入资源
+
+1. 确认输出内容
+2. 写入资源 +添加缓存
 ## 总结
 webpack 的整体流程主要还是依赖于 compilation 和 module 这两个对象，但其思想远不止这么简单。最开始也说过，webpack 本质是个插件集合，并且由 tapable 控制各插件在 webpack 事件流上运行，至于具体的思想和细节，将会在后一篇文章中提到。同时，在业务开发中，无论是为了提升构建效率，或是减小打包文件大小，我们都可以通过编写 webpack 插件来进行流程上的控制，这个也会在之后提到。

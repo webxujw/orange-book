@@ -47,3 +47,38 @@ npm uninstall -D => npm uninstall --save-dev
 1. 申请用户名 npm adduser 
 2. 登录 npm login 
 3. 发布 npm publish
+
+
+
+## npm exec
+
+```sh
+npm exec -- <pkg>[@<version>] [args...]
+npm exec --package=<pkg>[@<version>] -- <cmd> [args...]
+npm exec -c '<cmd> [args...]'
+npm exec --package=foo -c '<cmd> [args...]'
+# 别名: npm x
+```
+
+加上 `--` 后面的参数 都会传递给 `<pkg>`
+不加   `--` 后面的参数 都会传递给 npm exec 命令里面
+
+--package  -p   指定要安装的包
+
+--call  -c  根据安装包的PATH，运行命令
+
+--workspace  -w 指定工作空间
+
+--workspaces -ws  指定多个工作空间
+
+--include-workspace-root
+
+## npm init(npm create)
+
+```bash
+npm init [--force|-f|--yes|-y|--scope]
+npm init <@scope> (same as `npx <@scope>/create`)
+npm init [<@scope>/]<name> (same as `npx [<@scope>/]create-<name>`)
+```
+
+
